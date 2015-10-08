@@ -88,33 +88,22 @@ var uniqueLetters = function uniqueLetters(string){
 	}
 }
 
-// var isUnique = function isUnique(string){
-// 	uniqueString = "";
-// 	for (i = 0; i < string.length; i++){
-// 	var stringed = string.split("")
-// 	if (uniqueString.includes(string[i]) === false){
-// 		uniqueString += string[i];
-// 	}
-//   }
 
-//   if (string === uniqueString){
-//   	return true
-//   } else {
-//   	return false
-//   }
 
-// }
+
+
+
 
 
 //1. check Prime///////Question: How would you verify a prime number?/////a prime number is only divisible by itself and 1.
 
 var isPrime = function isPrime(num){
 
-	if (num <= 2){
+	if (num <= 3){
 		return true
 	}
 
-	for(var i = 2; i < num; i++){
+	for(var i = 3; i < num; i++){
 		if (num % i === 0) {
 			return false
 		}
@@ -208,8 +197,8 @@ var noDuplicates = function noDuplicates(array){
 
 // 6. merge two sorted arrays
 
-var arr1 = [1,3,5,7,9];
-var arr2 = [2,4,6,8,10];
+var arr1 = [1,3,5,7,9,15];
+var arr2 = [2,4,6,8,10,11,12,13,14];
 
 var mergeArrays = function mergeArrays(left, right){
 	merged = [];
@@ -256,6 +245,63 @@ var isPalindrome = function isPalindrome(string){
 var reverseInPlace = function reverseInPlace(string){
 	return string.split(' ').reverse().join(' ').split('').reverse().join('');
 }
+
+
+
+
+//bubble sort
+
+var bubbleSort = function bubbleSort(array){
+
+	for(var i = 0; i < array.length - 1; i++){ //outer for loop represents how many times we have to go through array
+		for(var j = 0; j < array.length -1; j++){
+			if (array[j] > array[j + 1]){
+				var temp = array[j];
+				array[j] = array[j+1];
+				array[j+1] = temp;
+			}
+		}
+	}
+	return array;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
