@@ -529,7 +529,54 @@ function compoundArray(a, b){
 }
 
 
+//morse code translator
+// Build a function, `morse_encode(str)` that takes in a string (no
+// numbers or punctuation) and outputs the morse code for it. See
+// http://en.wikipedia.org/wiki/Morse_code. Put two spaces between
+// words and one space between letters.
 
+//this code enters the first loop looking for any spaces in the string, if none
+// are found, it enters the second 'for in' loop and replaces letters with code from
+// the morseObject that was created by hand
+// this is O n(squared) time...not great
+var morseEncoder = function morseEncoder(string){
+
+	var morseObject = {
+		a: ".-",
+		b: "-...",
+		c: "-.-.",
+		d: "-..",
+		e: ".",
+		f: "..-.",
+		g: "--.",
+		h: "....",
+		i: "..",
+		j: ".---",
+		k: "-.-",
+		l: ".-..",
+		m: "--",
+		n: "-.",
+		o: "---",
+		p: ".--."
+	}
+
+	var brokenDownString = string.split('');
+	morseArray = [];
+
+	for ( var i = 0; i < string.length; i++){
+		if (brokenDownString[i] === " "){
+			morseArray.push(" ")
+		}
+		for (key in morseObject){
+			if (brokenDownString[i] === key){
+				morseArray.push(morseObject[key])
+			} 
+		}
+	}
+
+
+	console.log(morseArray.join(' '));
+}
 
 
 
