@@ -1,1 +1,1 @@
-hello.js
+console.log('test')

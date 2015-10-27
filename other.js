@@ -359,7 +359,8 @@ function compoundArray(a, b){
 		newArray.push(b[i]);
 		}
 	}
-	return newArray;
+	console.log("non-sorted:", newArray)
+	console.log("sorted:", newArray.sort(function(a,b){return a-b}))
 }
 
 
